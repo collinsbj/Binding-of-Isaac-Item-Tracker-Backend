@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/combinedData", (req,res) => {
-  res.send(addItemPool(items, itemPools));
+  res.json(addItemPool(items, itemPools));
 });
 
 function addItemPool(data1, data2) {

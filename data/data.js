@@ -7,7 +7,7 @@ var items = [
     imgURL: "./assets/brimstone.png"
   },
   {
-    itemName: "Crickets Head",
+    itemName: "Cricket's Head",
     id: 4,
     type: "passive",
     collected: false,
