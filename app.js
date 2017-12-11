@@ -32,4 +32,6 @@ function addItemPool(data1, data2) {
   return combinedData;
 }
 
+app.listen(3000 || process.env.PORT);
+
 console.log(addItemPool(items, itemPools));
