@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/combinedData", (req,res) => {
-  res.send("Hello");
+  res.send(addItemPool(items, itemPools));
 });
 
 function addItemPool(data1, data2) {
@@ -32,6 +32,6 @@ function addItemPool(data1, data2) {
   return combinedData;
 }
 
-app.listen(3000 || process.env.PORT);
+app.listen(process.env.PORT || 3000);
 
 console.log(addItemPool(items, itemPools));
