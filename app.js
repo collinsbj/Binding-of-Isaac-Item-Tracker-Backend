@@ -15,7 +15,8 @@ app.get("/combinedData", (req, res) => {
 });
 
 app.post("/toAPI", (req, res) => {
-  res.json("It worked");
+  console.log(req);
+  res.json("Item Added!");
 });
 
 function addItemPool(data1, data2) {
