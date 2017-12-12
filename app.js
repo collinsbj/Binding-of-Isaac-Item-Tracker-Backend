@@ -10,8 +10,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/combinedData", (req,res) => {
+app.get("/combinedData", (req, res) => {
   res.json(addItemPool(items, itemPools));
+});
+
+app.post("/toAPI", (req, res) => {
+  res.send("It worked");
 });
 
 function addItemPool(data1, data2) {
