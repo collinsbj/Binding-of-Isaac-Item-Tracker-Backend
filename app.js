@@ -15,7 +15,7 @@ app.get("/combinedData", (req, res) => {
 });
 
 app.post("/toAPI", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   res.send("Item Added!");
 });
 
