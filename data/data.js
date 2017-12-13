@@ -97,8 +97,32 @@ var itemPools = [
   }
 ];
 
+var combinedData = [];
+
+function addItemPool(data1, data2) {
+  var keysArray = Object.keys(data2[0].pool);
+
+  for (var i = 0; i < data1.length; i++) {
+    combinedData.push(data1[i]);
+    combinedData[i].itemPool = [];
+    for (var j = 0; j < keysArray.length; j++) {
+      for (var k = 0; k < data2[0].pool[keysArray[j]].length; k++) {
+        if (data1[i].itemName === data2[0].pool[keysArray[j]][k]) {
+          combinedData[i].itemPool.push(keysArray[j]);
+        }
+      }
+    }
+  }
+  return combinedData;
+}
+
+addItemPool(items, itemPools);
+
+console.log(combinedData)
+
 
 module.exports = {
   items,
-  itemPools
+  itemPools,
+  combinedData
 };
