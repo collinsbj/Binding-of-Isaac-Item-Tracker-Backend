@@ -95,11 +95,11 @@ let dataSet6 = [
   }
 ];
 
-describe("#combineData", () => {
+describe("#addItemPool", () => {
   it("should combine two sets of item data and add the correct item pools for each item", () => {
-    assert.deepEqual(data.combineData(dataSet1, dataSet2), dataSet3);
+    assert.deepEqual(data.addItemPool(dataSet1, dataSet2), dataSet3);
   });
   it("should combine two sets of item data and add the correct item pools for each item", () => {
-    assert.deepEqual(data.combineData(dataSet4, dataSet5), dataSet6);
+    assert.deepEqual(data.addItemPool(dataSet4, dataSet5), dataSet6);
   });
 });
